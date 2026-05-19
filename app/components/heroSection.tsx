@@ -31,7 +31,7 @@ export default function Hero(){
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="font text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-4xl"
+          className="font text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-4xl text-center"
         >
           Cada momento merece
           <span className="block mt-2 text-center ">
