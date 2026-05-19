@@ -53,7 +53,7 @@ export default function Servicos(){
            </div>
             <div className="font_body mt-3 items-center ">
             <h3 className="item-center mb-1 text-center font_w font">{card.evento}</h3>
-          <p className="text-center mb-2">{card.descricao}</p>
+          <p className="text-center mb-2 pl-3 pr-3">{card.descricao}</p>
           <div className="flex text-amber-500 justify-center text-lg ">
             <a href="">Ver Galeria  </a>
            <ArrowRight/> 

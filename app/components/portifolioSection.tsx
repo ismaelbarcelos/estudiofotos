@@ -30,7 +30,7 @@ export default function Portifolio(){
         <h3 className="uppercase font_body mb-5 text-amber-500"> Portfólio</h3>
         <h1 className="text-5xl font_body text-white">Momentos que viram memórias</h1>
 
-         <div className="w-25 h-0.5 bg-amber-500 mt-6" />
+         <div className="w-25 h-0.5 bg-amber-600 mt-6" />
        </div>
 </motion.div>
         </div>
