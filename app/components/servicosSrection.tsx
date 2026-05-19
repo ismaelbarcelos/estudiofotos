@@ -26,7 +26,7 @@ export default function Servicos(){
 
        <div className="flex flex-col items-center mb-25">
         <h3 className="uppercase font_body mb-5 text-amber-500"> serviços e especialidades</h3>
-        <h1 className="text-5xl font_body">Ensaios e Eventos</h1>
+        <h1 className="text-5xl font">Ensaios e Eventos</h1>
 
          <div className="w-25 h-0.5 bg-amber-500 mt-6" />
        </div>
@@ -42,7 +42,7 @@ export default function Servicos(){
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group card_background m-1 ml-4 mr-4 rounded-lg shadow"
+              className="group card_background m-1 ml-4 mr-4 rounded-lg shadow pb-3"
             >
 
         <div className="relative overflow-hidden rounded-lg aspect-3/4 ">
@@ -55,7 +55,7 @@ export default function Servicos(){
             <h3 className="item-center mb-1 text-center font_w font">{card.evento}</h3>
           <p className="text-center mb-2 pl-3 pr-3">{card.descricao}</p>
           <div className="flex text-amber-500 justify-center text-lg ">
-            <a href="">Ver Galeria  </a>
+            <a className="hover:border-b-2" href="">Ver Galeria </a>
            <ArrowRight/> 
           </div>
          

@@ -96,3 +96,7 @@ html {
   font-weight: 500;
   font-size: 30px;
 }
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
