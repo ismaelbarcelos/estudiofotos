@@ -58,15 +58,9 @@ export default function Servicos(){
             <a className="hover:border-b-2" href="">Ver Galeria </a>
            <ArrowRight/> 
           </div>
-         
-          
            </div>
-           
  </motion.div>
-
         )}
-
-
        </div>
       </section>
     </div>

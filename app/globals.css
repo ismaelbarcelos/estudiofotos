@@ -100,3 +100,10 @@ html {
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+.card_depoimentos{
+  background-color: #ebeaea;
+}
+
+
+

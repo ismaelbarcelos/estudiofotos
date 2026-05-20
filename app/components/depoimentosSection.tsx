@@ -1,15 +1,19 @@
 "use client"
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y,EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from "swiper/modules";
 import { motion } from 'motion/react';
 import { Autoplay } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-fade";
+import "swiper/css/effect-cards";
+import { div } from 'motion/react-client';
 
 const depoimentos = [
   {length:5, descrição:"As fotos ficaram simplesmente incriveis! Lucas consegui capturar cada emoçãodo nosso casamento.",nome:"Juliana & Rafel",evento:"Casamento"},
@@ -46,19 +50,62 @@ export default function Depoimentos(){
 </motion.div>
         </div>
 
-<div className="">
-<Swiper className='ml-50 swiper-wrapper grid grid-cols-1 md:grid-cols-3 gap-1 '    loop={true} speed={5000} spaceBetween={10} slidesPerView={3} modules={[Navigation, Pagination, Scrollbar, A11y,]} autoplay={{ delay: 0 }   }>
+<div className="flex ">
+
+   <button className="h-10 m-2 mt-30 custom-prev  left-4 top-1/2 z-10 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+        <ChevronLeft />
+      </button>
+
+
+
+<Swiper className=' grid grid-cols-1 md:grid-cols-3 gap-1  '    navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }} spaceBetween={10} slidesPerView={3} modules={[Navigation, Pagination, Scrollbar, A11y,EffectCards]} breakpoints={{
+    320: { slidesPerView: 1,},
+    768: {slidesPerView: 2, },
+    1024: { slidesPerView: 3, },
+  }}>
+
+       
+
+     
 
 {depoimentos.map((card)=>
 
-<SwiperSlide className=''>
-       <p>{card.descrição}</p>
-       <div className='bg-gray-600 w-50 h-0.5 '></div>
-       <h3>{card.nome}</h3>
-       <p>{card.evento}</p>
+
+
+<SwiperSlide key={card.nome} className=' '>
+<div className="bg-white p-6 rounded-xl flex flex-col h-full">
+<Quote className="w-8 h-8 text-primary/20 absolute top- right-6 text-amber-400
+" />
+
+  <div className='flex mb-3 star'>
+    <Star className='text-amber-400 fill-amber-400'/>
+    <Star className='text-amber-400 fill-amber-400'/>
+    <Star className='text-amber-400 fill-amber-400'/>
+    <Star className='text-amber-400 fill-amber-400'/>
+    <Star className='text-amber-400 fill-amber-400'/>
+  </div>
+  
+  <div className='flex flex-col h-full '> 
+    
+    <p className='mt-5 font-body text-sm leading-relaxed text-muted-foreground mb-6 italic flex-1'>{card.descrição}</p>
+       <div className='bg-amber-400 w-25 h-0.5 m-2 -mt-1'></div>
+       <h3 className='font-heading text-base font-semibold text-foreground'>{card.nome}</h3>
+       <p className='font_body text-sm text-primary mt-1'>{card.evento}</p>
+  </div>
+       </div> 
       </SwiperSlide>
+
+     
 )}
 </Swiper>
+
+ <button className="h-10 m-2 mt-30 custom-next  top-1/2 z-10 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+        <ChevronRight />
+      </button>
+
     </div>
       </section>
     </div>
