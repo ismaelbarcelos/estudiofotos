@@ -1,5 +1,7 @@
 
+import Convite from "./components/conviteSection";
 import Depoimentos from "./components/depoimentosSection";
+import Footer from "./components/fotterSection";
 import Hero from "./components/heroSection";
 import Nav from "./components/navSection";
 import Portifolio from "./components/portifolioSection";
@@ -13,6 +15,8 @@ export default function Home() {
       <Servicos/>
       <Portifolio/>
      <Depoimentos/>
+     <Convite/>
+     <Footer/>
     </div>
   );
 }
