@@ -113,4 +113,14 @@ html {
   color:#f7f4f0;
 }
 
+.border_botton{
+  border-bottom: 2px solid rgb(255, 174, 0);
+}
 
+.p_perfil{
+  color:#585756;
+}
+
+.back_perfil{
+  background-color: #ececec75;
+}

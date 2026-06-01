@@ -6,6 +6,7 @@ import Hero from "./components/heroSection";
 import Nav from "./components/navSection";
 import Portifolio from "./components/portifolioSection";
 import Servicos from "./components/servicosSrection";
+import Perfil from "./components/perfilSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Nav/>
       <Hero/>
       <Servicos/>
+      <Perfil/>
       <Portifolio/>
      <Depoimentos/>
      <Convite/>

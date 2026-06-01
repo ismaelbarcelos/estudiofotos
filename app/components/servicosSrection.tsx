@@ -13,7 +13,7 @@ const servicosData = [
 export default function Servicos(){
   return(
     <div>
-      <section id="servicos" className="mt-30 mb-15">
+      <section id="servicos" className="mt-30 mb-15 xl:ml-50 xl:mr-50">
 
          <motion.div
           initial={{ opacity: 0, y: 20 }}
