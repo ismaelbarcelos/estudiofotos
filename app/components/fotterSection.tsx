@@ -9,7 +9,7 @@ export default function Footer(){
   return(
     <div>
       <footer >
-        <div className="font_body md:mt-50 mt-28 pb-8 pt-8 pl-10 pr-10 grid grid-cols-1 md:grid-cols-4 gap-5 footer_back md:gap-25">
+        <div className="font_body  mt-12 pb-8 pt-8 pl-10 pr-10 grid grid-cols-1 md:grid-cols-4 gap-5 footer_back md:gap-25">
         <div>
           <h1 className="flex mb-2"><Camera className="mr-1"/> Lucas Moreira </h1>
          

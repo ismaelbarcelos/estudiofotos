@@ -7,6 +7,7 @@ import Nav from "./components/navSection";
 import Portifolio from "./components/portifolioSection";
 import Servicos from "./components/servicosSrection";
 import Perfil from "./components/perfilSection";
+import Orcamento from "./components/orçamentoSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Portifolio/>
      <Depoimentos/>
      <Convite/>
+     <Orcamento/>
      <Footer/>
     </div>
   );

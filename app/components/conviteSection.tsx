@@ -11,7 +11,7 @@ const background = "camera.jpg"
 
 export default function Convite(){
   return(
-    <div>
+    <div id="contato">
       <section className="relative ">
         <div className="">
           <img className="w-full md:h-100 h-110 object-cover absolute inset-0 " src={background} alt="camera profissional" />

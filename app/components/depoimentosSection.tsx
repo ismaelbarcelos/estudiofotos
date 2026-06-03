@@ -29,7 +29,7 @@ const depoimentos = [
 export default function Depoimentos(){
   return(
     <div>
-      <section className="card_background pt-8 pb-8 mt-20">
+      <section id='depoimentos' className="card_background pt-8 pb-8 mt-20">
 
         <div>
                  <motion.div

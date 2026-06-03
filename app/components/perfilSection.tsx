@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 export default function Perfil(){
   return(
     <div>
-      <section className="p-5 back_perfil pb-15 ">
+      <section id="sobre" className="p-5 back_perfil pb-15 ">
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:ml-50 xl:mr-50 items-center"> 
 

@@ -8,7 +8,7 @@ const HERO_IMAGE = "https://media.base44.com/images/public/6a0485cf2f58f739cbeab
 export default function Hero(){
   return(
     <div>
-      <section id="hero ">
+      <section id="hero">
       <div className="relative h-screen w-full overflow-hidden">
   
   <img

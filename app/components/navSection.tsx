@@ -4,29 +4,32 @@ import React, { useState, useEffect } from "react";
 import { Camera, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { div } from "motion/react-client";
+import Link from "next/link";
 
 
 const navdata = [
   {name: "Início",
-    link: "#nav"
+    link: "/#hero"
   },
   {name:"Serviços",
-    link:"#servicos"
+    link:"/#servicos"
   },
   {name:"Galeria",
-    link:"#galeria"
+    link:"./galeria"
   },
   {name:"Sobre",
-    link:"#sobre"
+    link:"/#sobre"
   },
   {name:"Depoimentos",
-    link:"#depoimentos"
+    link:"/#depoimentos"
   },
   {name:"Contato",
-    link:"#contato"
+    link:"/#contato"
   }
 
 ]
+
+
 
 
 export default function Nav(){
@@ -40,30 +43,32 @@ export default function Nav(){
   },[]);
 
   return(
-        <motion.nav
+        <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ?"back_white backdrop-blur-md shadow-sm py-3": "bg-transparent py-5" }`}
     >
 
-    <div className="flex mx-auto gap-10 items-center justify-between">
+    <div  className="flex mx-auto gap-10 items-center justify-between">
       <a className={`ml-5 flex items-center gap-2 font-heading text-xl font-semibold tracking-wide" ${scrolled ? "text-foreground": "text-white"} `} href="">  <Camera className={`" w-10 h-10" ${scrolled ? "text-primary": "text-white"}`}/>
       <span>Lucas Martins</span></a>
         
    
      <nav id="nav" className=" gap-8 mr-20 hidden md:flex items-center">
       {navdata.map(nav=>(
-        <a key={nav.link} 
+        <Link key={nav.link} 
+        
         href={nav.link} 
          className={`text-sm font-body font-medium tracking-wide transition-colors hover:text-primary ${
                 scrolled ? "text-muted-foreground" : "text-white/80 hover:text-white"
               }`}
-        >{nav.name}</a>
+        >{nav.name}</Link>
+        
       ))}
- <a  className={`text-sm font-body font-medium tracking-wide transition-colors hover:text-primary border border-amber-300 rounded-sm hover:bg-amber-300 p-3 ${
+ <Link  className={`text-sm font-body font-medium tracking-wide transition-colors hover:text-primary border border-amber-300 rounded-sm hover:bg-amber-300 p-3 ${
                 scrolled ? "text-muted-foreground" : "text-white/80 hover:text-white"
-              }`}  href="">Solicitar orçamento</a>
+              }`}  href="/#orcamento">Solicitar orçamento</Link>
      </nav>
 
       <div className="flex justify-end "> 
@@ -100,9 +105,9 @@ export default function Nav(){
         </div>
       ))}</nav>
 
-       <a className={` text-sm font-body font-medium tracking-wide transition-colors hover:text-primary border border-amber-300 rounded-sm hover:bg-amber-300 p-3 ml-3`} href="">Solicitar orçamnento</a>
+       <a className={` text-sm font-body font-medium tracking-wide transition-colors hover:text-primary border border-amber-300 rounded-sm hover:bg-amber-300 p-3 ml-3`} href="/#orcamento">Solicitar orçamnento</a>
       
-      
+     
       </motion.div>
      )}
      
